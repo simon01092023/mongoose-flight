@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+	<nav>
+		<ul class="nav-list">
+			<li>
+				<a href="/flights">All Flights</a>
+			</li>
+			<li>
+				<a href="/flights/new">Add a Flight</a>
+			</li>
+		</ul>
+	</nav>
+	<h2>flights List</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Airline</th>
+				<th>Airport</th>
+				<th>FlightNo</th>
+				<th>Departs</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Write the line of EJS to iterate over movies using forEach -->
+			<% flightsDocs.forEach(f=> { %>
+
+
+				<tr>
+					<td>
+						<%= f.airline %>
+					</td>
+					<td>
+						<%= f.airport %>
+					</td>
+					<td>
+						<%= f.flightNo %>
+					</td>
+					<td>
+						<%= f.departs %>
+					</td>
+					<td>
+						<a href="/flights/<%= f._id %>">DETAILS</a>
+					</td>
+
+
+
+				</tr>
+				<!-- Close the forEach using EJS here -->
+				<% }) %>
+		</tbody>
+	</table>
+
+</body>
+
+</html>
