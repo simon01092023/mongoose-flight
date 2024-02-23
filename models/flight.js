@@ -48,13 +48,3 @@ const flightSchema = new Schema({
 });
 
 module.exports = mongoose.model('Flight', flightSchema);
-
-const car = {
-  name: "honda",
-
-  start: function () {
-    console.log("car is running")
-  }
- }
-
- car.start()

@@ -4,17 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Flight Destinations</title>
 </head>
 
 <body>
-
+    <nav>
+        <ul class="nav-list">
+            <li>
+                <a href="/flights">All Flights</a>
+            </li><br>
+            <li>
+                <a href="/flights/new">Add a Flight</a>
+            </li>
+        </ul>
+    </nav>
     <form id="add-destination-form" method="POST" action="/flights/<%= flight._id %>/destinations">
-
-        <label>Arrival Date:</label>
-        <date name="arrival"></date>
-        <label>Airport Code:</label>
-        <select name="airport">
+        <label for="arrival-date">Arrival Date:</label>
+        <input type="date" id="arrival-date" name="arrival">
+        <label for="airport-code">Airport Code:</label>
+        <select id="airport-code" name="airport">
             <option value="AUS">AUS</option>
             <option value="DFW">DFW</option>
             <option value="DEN">DEN</option>
@@ -23,24 +32,23 @@
         </select>
         <input type="submit" value="Add destination">
     </form>
+
     <% if (flight.destinations.length) { %>
         <table>
             <thead>
                 <tr>
                     <th>Arrival Date</th>
                     <th>Airport Code</th>
-
                 </tr>
             </thead>
             <tbody>
                 <% flight.destinations.forEach(function(destination) { %>
                     <tr>
-
-                        <td>
-                            <%= destination.airport %>
-                        </td>
                         <td>
                             <%= destination.arrival %>
+                        </td>
+                        <td>
+                            <%= destination.airport %>
                         </td>
                     </tr>
                     <% }); %>
@@ -49,9 +57,6 @@
         <% } else { %>
             <h5>No destinations at this time</h5>
             <% } %>
-
-                <%= flight.airline %>
-                    <%= flight.airport %>
 </body>
 
 </html>

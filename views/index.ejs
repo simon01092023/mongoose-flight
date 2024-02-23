@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  <title>Document</title>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>Landing Page</title>
 </head>
+
 <body>
   <nav>
-    <a href='flights/new'>
-      New Flights
-    </a>
-    <br><br>
-    <a href='flights'>
-      All Flights
-    </a>
-    <br><br>
+    <ul class="nav-list">
+      <li>
+        <a href="/flights">All Flights</a>
+      </li><br>
+      <li>
+        <a href="/flights/new">Add a Flight</a>
+      </li>
+    </ul>
   </nav>
   <h1>
     <%= title %>
   </h1>
-  
+
   <p>Welcome to <%= title %>
   </p>
 </body>
+
 </html>

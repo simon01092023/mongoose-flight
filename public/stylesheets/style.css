@@ -1,8 +1,90 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+ /* Reset default form styles */
+ body,
+ form,
+ input,
+ select {
+   margin: 0;
+   padding: 0;
+   font-family: Arial, sans-serif;
+ }
 
-a {
-  color: #00B7FF;
-}
+ /* Form container */
+ #add-destination-form {
+   max-width: 400px;
+   margin: 0 auto;
+   padding: 20px;
+   background-color: #f9f9f9;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Form labels */
+ label {
+   display: block;
+   margin-bottom: 10px;
+   font-weight: bold;
+ }
+
+ /* Input fields */
+ input[type="date"],
+ select {
+   width: 80%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   margin-bottom: 15px;
+   font-size: 14px;
+ }
+
+ /* Submit button */
+ input[type="submit"] {
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   border-radius: 4px;
+   padding: 10px 20px;
+   cursor: pointer;
+   font-size: 16px;
+ }
+
+ /* Submit button hover effect */
+ input[type="submit"]:hover {
+   background-color: #0056b3;
+ }
+
+ /* Table styles */
+ table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 20px;
+ }
+
+ th,
+ td {
+   padding: 10px;
+   text-align: left;
+   border-bottom: 1px solid #ddd;
+ }
+
+ th {
+   background-color: #f5f5f5;
+ }
+
+ /* No destinations message */
+ h5 {
+   color: #888;
+   text-align: center;
+ }
+
+ h1 {
+   text-align: center;
+   font-size: 24px;
+   margin-bottom: 20px;
+ }
+
+ /* Style the welcome paragraph */
+ p {
+   text-align: center;
+   font-size: 16px;
+   color: #333;
+ }
