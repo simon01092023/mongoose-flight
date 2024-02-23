@@ -1,6 +1,7 @@
 const { response } = require('express')
 const FlightsModel = require('../models/flight')
 
+
 module.exports = {
   index,
   new: newFlight,

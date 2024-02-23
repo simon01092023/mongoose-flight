@@ -31,16 +31,16 @@ app.use(function (request, response, next) {
   next(createError(404));
 });
 
-// error handler
-app.use(function (error, request, response, next) {
-  // set locals, only providing error in development
-  request.locals.message = error.message;
-  console.log(error.message)
-  request.locals.error = request.app.get('env') === 'development' ? err : {};
+// //error handler
+// app.use(function (error, request, response, next) {
+//   // set locals, only providing error in development
+//   request.locals.message = error.message;
+//   console.log(error.message);
+//   request.locals.error = request.app.get('env') === 'development' ? error : {};
 
-  // render the error page
-  request.status(err.status || 500);
-  request.render('error');
-});
+//   // render the error page
+//   request.status(error.status || 500);
+//   request.render('error');
+// });
 
 module.exports = app;

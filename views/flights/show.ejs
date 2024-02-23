@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <form id="add-destination-form" method="POST" action="/flights/<%= flights._id %>/destination">
+
+    <form id="add-destination-form" method="POST" action="/flights/<%= flight._id %>/destinations">
 
         <label>Arrival Date:</label>
         <date name="arrival"></date>
@@ -22,7 +23,7 @@
         </select>
         <input type="submit" value="Add destination">
     </form>
-    <% if (flights.destinations.length) { %>
+    <% if (flight.destinations.length) { %>
         <table>
             <thead>
                 <tr>
@@ -32,23 +33,25 @@
                 </tr>
             </thead>
             <tbody>
-                <% flights.destinations.forEach(function(f) { %>
+                <% flight.destinations.forEach(function(destination) { %>
                     <tr>
 
                         <td>
-                            <%= f.airport %>
+                            <%= destination.airport %>
                         </td>
                         <td>
-                            <%= f.arrival %>
+                            <%= destination.arrival %>
                         </td>
                     </tr>
                     <% }); %>
             </tbody>
         </table>
         <% } else { %>
-            <h5>Details not availble at this time</h5>
+            <h5>No destinations at this time</h5>
             <% } %>
 
+                <%= flight.airline %>
+                    <%= flight.airport %>
 </body>
 
 </html>

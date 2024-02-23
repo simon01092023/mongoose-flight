@@ -1,4 +1,3 @@
-const { response } = require('express')
 const FlightsModel = require('../models/flight')
 
 module.exports = {
@@ -16,7 +15,7 @@ async function create(request, response) {
         // since we're mutating (changing) the flightDoc, we have to tell the database
         await flightDoc.save() // this tells the database we added a destination to the flight we found!
         // then respond to the client
-        response.redirect(`/flight/${request.params.id}`)
+        response.redirect(`/flights/${request.params.id}`)
     } catch (err) {
         console.log(err)
         response.send(err)

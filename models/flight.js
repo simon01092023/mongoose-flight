@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 // optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
 
+
 const dDate = new Date()
 dDate.setDate(dDate.getDate() + 365);
 
@@ -47,3 +48,13 @@ const flightSchema = new Schema({
 });
 
 module.exports = mongoose.model('Flight', flightSchema);
+
+const car = {
+  name: "honda",
+
+  start: function () {
+    console.log("car is running")
+  }
+ }
+
+ car.start()
