@@ -41,10 +41,9 @@ const flightSchema = new Schema({
     type: Date,
     default: dDate
   },
-  reviews: [destinationSchema]
+  destinations: [destinationSchema]
 }, {
   timestamps: true
 });
-
 
 module.exports = mongoose.model('Flight', flightSchema);

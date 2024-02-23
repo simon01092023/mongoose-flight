@@ -9,45 +9,45 @@
 </head>
 
 <body>
-    <nav>
-        <ul class = "nav-list">
-          <li>
-            <a href="/flights">All Flights</a>
-          </li>
-          <li>
-            <a href="/flights/new">Add a Flight</a>
-          </li>
-        </ul>
-      </nav>
-<main>
-	<h2>Enter a New Flight</h2>
-	<form action="/flights" method="POST">
-		
-		<label>Airline:
-			<select name="airline">
-                <option value="American">American</option>
-				<option value="Southwest">Southwest</option>
-				<option value="United">United</option>
-            </select>
-		</label><br>
-		<label>Airport
-			<select name="airport">
-				<option value="AUS">AUS</option>
-				<option value="DFW">DFW</option>
-				<option value="DEN">DEN</option>
-				<option value="LAX">LAX</option>
-                <option value="SAN">SAN</option>
-			</select>
-		</label><br>
-		<label>FlightNo:
-			<input type="number" name="flightNo">
-		</label><br>
-		<label>Departs:
-			<input type="text" name="Dates" checked>
-		</label><br>
-		<button type="submit">Add Flight</button>
-	</form>
-</main>
+	<nav>
+		<ul class="nav-list">
+			<li>
+				<a href="/flights">All Flights</a>
+			</li>
+			<li>
+				<a href="/flights/new">Add a Flight</a>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<h2>Enter a New Flight</h2>
+		<form action="/flights" method="POST">
+
+			<label>Airline:
+				<select name="airline">
+					<option value="AAA">American</option>
+					<option value="SWA">Southwest</option>
+					<option value="UAA">United</option>
+				</select>
+			</label><br>
+			<label>Airport
+				<select name="airport">
+					<option value="AUS">AUS</option>
+					<option value="DFW">DFW</option>
+					<option value="DEN">DEN</option>
+					<option value="LAX">LAX</option>
+					<option value="SAN">SAN</option>
+				</select>
+			</label><br>
+			<label>FlightNo:
+				<input type="number" name="flightNo">
+			</label><br>
+			<label>Departs:
+				<input type="date" name="Dates" checked>
+			</label><br>
+			<button type="submit">Add Flight</button>
+		</form>
+	</main>
 </body>
 
 </html>

@@ -35,6 +35,7 @@ app.use(function (request, response, next) {
 app.use(function (error, request, response, next) {
   // set locals, only providing error in development
   request.locals.message = error.message;
+  console.log(error.message)
   request.locals.error = request.app.get('env') === 'development' ? err : {};
 
   // render the error page

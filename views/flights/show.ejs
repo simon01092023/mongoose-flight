@@ -22,7 +22,7 @@
         </select>
         <input type="submit" value="Add destination">
     </form>
-    <% if (flights.destination.length) { %>
+    <% if (flights.destinations.length) { %>
         <table>
             <thead>
                 <tr>
@@ -32,7 +32,7 @@
                 </tr>
             </thead>
             <tbody>
-                <% flights.destination.forEach(function(f) { %>
+                <% flights.destinations.forEach(function(f) { %>
                     <tr>
 
                         <td>

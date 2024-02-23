@@ -9,7 +9,7 @@ module.exports = {
 }
 
 async function show(request, response) {
-  const flight = await flightsModel.findById(request.params.id);
+  const flight = await FlightsModel.findById(request.params.id);
   response.render('flights/show', { title: 'Flight Detail', flight });
 }
 
@@ -25,7 +25,7 @@ async function index(request, response) {
     // flightsDocs is now a variables inside of views/flights/index.ejs 
   } catch (err) {
     console.log(err)
-    res.redirect('/')
+    response.redirect('/')
   }
 }
 
@@ -33,7 +33,7 @@ async function index(request, response) {
 
 function newFlight(request, response) {
 
-  res.render('flights/new')
+  response.render('flights/new')
 }
 
 
